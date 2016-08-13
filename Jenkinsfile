@@ -16,4 +16,3 @@ node {
   sh("gcloud docker push ${imageTag}")
 
   }
-}
