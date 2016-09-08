@@ -12,6 +12,7 @@ node {
   stage 'Run Go tests'
   sh("docker run ${imageTag} go test")
 
+  input 'Push to Registry?'
   stage 'Push image to registry'
   sh("gcloud docker push ${imageTag}")
 
